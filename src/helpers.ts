@@ -199,9 +199,7 @@ export function fetchCurrencyName(currencyAddress: Address): string {
  * @param contentURI
  * @param contentHash
  * @param metadataURI
- * @param metadataHash
- * @param tokenContract
- * @param exchangeContract
+ * @param metadataHash 
  * @param creatorBidShare
  * @param ownerBidShare
  * @param prevOwnerBidShare
@@ -209,8 +207,7 @@ export function fetchCurrencyName(currencyAddress: Address): string {
  * @param createdAtBlockNumber
  */
 export function createAvatar(
-    id: string,
-    tokenId: string,
+    id: string, 
     transactionHash: string,
     owner: User,
     creator: User,
@@ -218,9 +215,7 @@ export function createAvatar(
     contentURI: string,
     contentHash: Bytes,
     metadataURI: string,
-    metadataHash: Bytes,
-    tokenContract: string,
-    exchangeContract: string,
+    metadataHash: Bytes, 
     creatorBidShare: BigInt,
     ownerBidShare: BigInt,
     prevOwnerBidShare: BigInt,
@@ -228,8 +223,7 @@ export function createAvatar(
     createdAtBlockNumber: BigInt
 ): Avatar {
 
-    let avatar = new Avatar(id) 
-    avatar.tokenId = tokenId
+    let avatar = new Avatar(id)  
     avatar.owner = owner.id
     avatar.transactionHash = transactionHash 
     avatar.creator = creator.id
@@ -237,9 +231,7 @@ export function createAvatar(
     avatar.contentURI = contentURI
     avatar.contentHash = contentHash
     avatar.metadataURI = metadataURI
-    avatar.metadataHash = metadataHash
-    avatar.tokenContract = tokenContract
-    avatar.exchangeContract = exchangeContract
+    avatar.metadataHash = metadataHash 
     avatar.creatorBidShare = creatorBidShare
     avatar.ownerBidShare = ownerBidShare
     avatar.prevOwnerBidShare = prevOwnerBidShare
@@ -479,8 +471,7 @@ export function createReserveListing(
     id: string,
     transactionHash: string,
     tokenId: BigInt,
-    tokenContract: string,
-   // exchangeContract: string,
+    tokenContract: string, 
     avatar: Avatar | null,
     startsAt: BigInt,
     duration: BigInt,
@@ -497,8 +488,7 @@ export function createReserveListing(
 
     reserveListing.tokenId = tokenId
     reserveListing.transactionHash = transactionHash
-    reserveListing.tokenContract = tokenContract
-    //reserveListing.exchangeContract = exchangeContract
+    reserveListing.tokenContract = tokenContract 
     reserveListing.token = tokenContract.concat('-').concat(tokenId.toString())
     reserveListing.avatar = avatar ? avatar.id : null
     reserveListing.approved = false
