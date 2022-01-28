@@ -1,4 +1,4 @@
-specVersion: 0.55119.3
+specVersion:  0.0.3
 description: Motif Avatar Subgraph
 repository: https://github.com/motif-foundation/motif-avatar-subgraph
 schema:
@@ -10,7 +10,7 @@ dataSources:
     source:
       address: "0x409BB6baCD19d8Cb66e878ed35305546519D24Ca"
       abi: Avatar
-      startBlock: 55119
+      startBlock: 57961
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -40,7 +40,7 @@ dataSources:
     source:
       address: "0xca0D695c82ae73b4E4BA17D0F763E4b3F9768836"
       abi: AvatarExchange
-      startBlock: 8450
+      startBlock: 57961
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -77,7 +77,7 @@ dataSources:
     source:
       address: "0x518E68665aC9e016300Be54878ea3bF981BdBD1d"
       abi: AvatarListing
-      startBlock: 55119
+      startBlock: 57961
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
