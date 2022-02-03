@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "create-graph": "graph create motif-foundation/motif-avatar-subgraph --node https://api.thegraph.com/deploy/",
-    "create-local": "graph create motif-foundation/motif-avatar-subgraph --node http://127.0.0.1:8020",
+    "create-local": "graph create motif-foundation/motif-avatar-subgraph2 --node http://127.0.0.1:8020",
     "codegen": "graph codegen --output-dir types",
     "build": "graph build",
     "deploy": "graph deploy motif-foundation/motif-avatar-subgraph --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
-    "deploy-local": "graph deploy motif-foundation/motif-avatar-subgraph --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
+    "deploy-local": "graph deploy motif-foundation/motif-avatar-subgraph2 --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
   },
   "devDependencies": {
     "@ethersproject/providers": "^5.0.16",
@@ -29,8 +29,8 @@
     "typescript": "^4.1.2"
   },
   "dependencies": {
-    "@motif-foundation/listing": "1.0.8",
-    "@motif-foundation/asset": "^1.0.9",
-    "@motif-foundation/sdk": "^1.0.31"
+    "@motif-foundation/listing": "1.0.10",
+    "@motif-foundation/asset": "^1.0.10",
+    "@motif-foundation/sdk": "^1.0.34"
   } 
 }
