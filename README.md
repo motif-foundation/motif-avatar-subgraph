@@ -3,6 +3,7 @@
 1. Install repo
 	update package.json with latest motif-item, motif-listing, motif-sdk
 	yarn
+	yarn install --ignore-engines
 	sudo apt-get install libsecret-1-dev
 2. Update subgraph 
     update subgraph.yaml with data you got from motif-avatar, motif-avatarListing
