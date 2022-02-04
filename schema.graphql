@@ -29,6 +29,9 @@ type Avatar @entity {
   "The uri of the metadata"
   metadataURI: String!
 
+  "The uri of the metadata"
+  isDefault: Boolean!
+
   "The bid share for the current owner of the Avatar"
   ownerBidShare: BigInt!
 
@@ -315,6 +318,38 @@ type URIUpdate @entity {
   "The number of the block the URIUpdate was created in"
   createdAtBlockNumber: BigInt!
 }
+
+
+
+type DefaultUpdate @entity {
+  "<tokenId>-<transactionHash>-<logIndex>"
+  id: ID!
+
+  "The transaction has the uri update happened at"
+  transactionHash: String!
+
+  "The previous uri"
+  from: Boolean!
+
+  "The new uri"
+  to: Boolean!
+
+  "The Avatar associated with the DefaultUpdate"
+  avatar: Avatar!
+
+  "The owner of the Avatar"
+  owner: User!
+
+  "The updater of the Avatar"
+  updater: User!
+
+  "The timestamp of the block the DefaultUpdate was created in"
+  createdAtTimestamp: BigInt!
+
+  "The number of the block the DefaultUpdate was created in"
+  createdAtBlockNumber: BigInt!
+}
+
 
 
 enum ReserveListingBidType {

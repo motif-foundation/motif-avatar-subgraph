@@ -5,6 +5,7 @@ import {
   Avatar as AvatarContract,
   TokenMetadataURIUpdated,
   TokenURIUpdated,
+  TokenDefaultUpdated,
   Transfer,
 } from '../types/Avatar/Avatar'
 import { log } from '@graphprotocol/graph-ts'
@@ -13,6 +14,7 @@ import {
   createTransfer,
   createURIUpdate,
   fetchAvatarBidShares,
+  createDefaultUpdate,
   findOrCreateUser,
   zeroAddress,
 } from './helpers'
@@ -58,6 +60,41 @@ export function handleTokenURIUpdated(event: TokenURIUpdated): void {
   avatar.save()
 
   log.info(`Completed handler for TokenURIUpdated Event for tokenId: {}`, [tokenId])
+}
+
+export function handleTokenDefaultUpdated(event: TokenDefaultUpdated): void {
+  let tokenId = event.params._tokenId.toString()
+
+  log.info(`Starting handler for TokenDefaultUpdated Event for tokenId: {}`, [tokenId])
+
+  let avatar = Avatar.load(tokenId)
+  if (avatar == null) {
+    log.error('Avatar is null for tokenId: {}', [tokenId])
+  }
+
+  let updater = findOrCreateUser(event.params.owner.toHexString())
+  let defaultUpdateId = tokenId
+    .concat('-')
+    .concat(event.transaction.hash.toHexString())
+    .concat('-')
+    .concat(event.transactionLogIndex.toString())
+
+  createDefaultUpdate(
+    defaultUpdateId,
+    event.transaction.hash.toHexString(),
+    avatar as Avatar,
+    avatar.isDefault,
+    event.params._isDefault,
+    updater.id,
+    avatar.owner,
+    event.block.timestamp,
+    event.block.number
+  )
+
+  avatar.isDefault = event.params._isDefault
+  avatar.save()
+
+  log.info(`Completed handler for TokenDefaultUpdated Event for tokenId: {}`, [tokenId])
 }
 
 /**

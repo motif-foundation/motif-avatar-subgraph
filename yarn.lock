@@ -457,26 +457,18 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@motif-foundation/asset@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@motif-foundation/asset/-/asset-1.0.8.tgz#2ec2669b12862500898ffb5d5bc73239e66a4d3c"
-  integrity sha512-eAkYBWKtReIZe1TaEUYeSzMiA2qOMf/dAmUxWu78w06c/vYgyRR/7GkufFngmB+tpsGqSLfWVbAl5loIg7/lKQ==
+"@motif-foundation/asset@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@motif-foundation/asset/-/asset-1.0.11.tgz#045ca0aaa6de04c8660e39cf827b1fb3e8ae3d3b"
+  integrity sha512-TUh3kQ79rLk6hByLJkImnB6RETcf+HfIiAEjqzbe6F9qDnsMAO+0fCFXXmWn/VyF7T2hxaTJ2RTogUJM0S1zQA==
   dependencies:
     ethers "^5.0.19"
     truffle-flattener "^1.5.0"
 
-"@motif-foundation/asset@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@motif-foundation/asset/-/asset-1.0.9.tgz#1e1879c5f6e381bb850853009d744197619575c7"
-  integrity sha512-2hufBYYvgrDCVMUlEu7Qgw4Y9e8zK9vdI/turtHhbDlAatUqDFmrKgBimEdK22UEwas0Wx1e/BdmZ0td6J34yg==
-  dependencies:
-    ethers "^5.0.19"
-    truffle-flattener "^1.5.0"
-
-"@motif-foundation/avatar-metadata@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@motif-foundation/avatar-metadata/-/avatar-metadata-1.0.1.tgz#5cb099f8c19f34373ea3084d8267121ae35aabc0"
-  integrity sha512-cA2oF8lRyZQ6ezRXk8qw3TmIqTz/FSukA8Z9k2NrLNLljKhRYB2rKYRju2H9iCfxCHTdL3vOv8iL7QNkZZbYng==
+"@motif-foundation/avatar-metadata@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@motif-foundation/avatar-metadata/-/avatar-metadata-1.0.7.tgz#161d383a16456e93e00e9d722fac0ea86739227d"
+  integrity sha512-s3M8A0Q+dzoVv5Q1yJik8eCXw+vLg5nCzAbY7fRxJ8AkxdKxeTrdFgNBN0vhgeI2sUuDvVdHKHECyB6aHEv8kA==
   dependencies:
     "@types/jsonschema" "^1.1.1"
     jsonschema "^1.4.0"
@@ -495,10 +487,10 @@
     tslib "^2.0.3"
     typescript "^4.1.3"
 
-"@motif-foundation/land-metadata@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@motif-foundation/land-metadata/-/land-metadata-1.0.1.tgz#5a029dd76e6e79ac7afd1a04e34afa93114d3745"
-  integrity sha512-wPlyT5wZY2IY3AHl4unoV6dUl8H1aG0lM2F5xnmtt4bQ6ypJ0lDpLMfB3zZdpn9H/xAw0UsYZKYWs21QyZqMSA==
+"@motif-foundation/land-metadata@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@motif-foundation/land-metadata/-/land-metadata-1.0.2.tgz#bfbc2622aeca89ff1c5580fc31279661fa1c195c"
+  integrity sha512-WueqWwD8Bl0xOSv9JML0srY99igQ94kBjYFGjDJA0y6ajfnbu90pj0UCXlU+UzDYN8rvqqg4h7MYic41WwOyOA==
   dependencies:
     "@types/jsonschema" "^1.1.1"
     jsonschema "^1.4.0"
@@ -506,28 +498,28 @@
     tslib "^2.0.3"
     typescript "^4.1.3"
 
-"@motif-foundation/listing@1.0.8", "@motif-foundation/listing@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@motif-foundation/listing/-/listing-1.0.8.tgz#da51b5d0322ba3f7c758a31c60372926c1ee0d0a"
-  integrity sha512-+i4jOQezo0kBOBJvQgN38WV0rnSlEbLkmrHQyX0dWUob2lzcdf4j4/NS1SZDfZ/WLEXfZfbLG0UjVFJkh2dX4Q==
+"@motif-foundation/listing@1.0.13", "@motif-foundation/listing@^1.0.13":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@motif-foundation/listing/-/listing-1.0.13.tgz#1a4b954ba50164992c475b43ec5d92186ab0ea50"
+  integrity sha512-4jlITrbmkVS7Ggb0khkkk2y9hZ9A1c557RjaKj6oh3V7F3CiJR8sSCL52Xlp3CPs2hytRsgCJz1m4nqXmOzNqQ==
   dependencies:
-    "@motif-foundation/asset" "^1.0.8"
+    "@motif-foundation/asset" "^1.0.11"
     "@openzeppelin/contracts" "^3.2.0"
     dotenv "^8.2.0"
     fs-extra "^9.1.0"
     minimist "^1.2.5"
     solidity-coverage "^0.7.16"
 
-"@motif-foundation/sdk@^1.0.14":
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/@motif-foundation/sdk/-/sdk-1.0.14.tgz#c45c31400c8e9d169eeb09d05c71709de0b023a9"
-  integrity sha512-GHllTsOjRTSW4HzWRDpuRMQcZZTQQQFrHszX1sZoZmuqxOzBqX5oOCYTIOaWiUSgBIgUMBsv1rqYVy8WYYp5+Q==
+"@motif-foundation/sdk@^1.0.38":
+  version "1.0.38"
+  resolved "https://registry.yarnpkg.com/@motif-foundation/sdk/-/sdk-1.0.38.tgz#f19d4d3b5392377052649dd8e54419118a1f3137"
+  integrity sha512-bjjk3Vn9s/bL3ImKdMPdK04DwPaMNCfHPhdSezYTuI23jmMzgarO7v2xhyQ8dNxidOG7XNdJ1FYscP1AGPzrgg==
   dependencies:
-    "@motif-foundation/asset" "^1.0.9"
-    "@motif-foundation/avatar-metadata" "^1.0.1"
+    "@motif-foundation/asset" "^1.0.11"
+    "@motif-foundation/avatar-metadata" "^1.0.7"
     "@motif-foundation/item-metadata" "^1.0.2"
-    "@motif-foundation/land-metadata" "^1.0.1"
-    "@motif-foundation/listing" "^1.0.8"
+    "@motif-foundation/land-metadata" "^1.0.2"
+    "@motif-foundation/listing" "^1.0.13"
     "@motif-foundation/space-metadata" "^1.0.1"
     axios "^0.21.1"
     eth-sig-util "^3.0.0"

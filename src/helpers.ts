@@ -12,6 +12,7 @@ import {
     ReserveListingBid,
     Transfer,
     URIUpdate,
+    DefaultUpdate,
     User,
 } from '../types/schema'
 import { Avatar as AvatarContract } from '../types/Avatar/Avatar'
@@ -465,6 +466,31 @@ export function createURIUpdate(
 
     uriUpdate.save()
     return uriUpdate
+}
+
+export function createDefaultUpdate(
+    id: string,
+    transactionHash: string,
+    avatar: Avatar,
+    from: boolean,
+    to: boolean,
+    updater: string,
+    owner: string,
+    createdAtTimestamp: BigInt,
+    createdAtBlockNumber: BigInt
+): DefaultUpdate {
+    let dafaultUpdate = new DefaultUpdate(id)
+    dafaultUpdate.transactionHash = transactionHash
+    dafaultUpdate.avatar = avatar.id 
+    dafaultUpdate.from = from
+    dafaultUpdate.to = to
+    dafaultUpdate.updater = updater
+    dafaultUpdate.owner = owner
+    dafaultUpdate.createdAtTimestamp = createdAtTimestamp
+    dafaultUpdate.createdAtBlockNumber = createdAtBlockNumber
+
+    dafaultUpdate.save()
+    return dafaultUpdate
 }
 
 export function createReserveListing(
