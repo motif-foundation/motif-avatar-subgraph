@@ -8,9 +8,9 @@ dataSources:
     name: Avatar
     network: motif
     source:
-      address: "0x409BB6baCD19d8Cb66e878ed35305546519D24Ca"
+      address: "0x083840b7F1a7D0D70C736BE1A4098973d5A0F105"
       abi: Avatar
-      startBlock: 57961
+      startBlock: 71045
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -29,6 +29,8 @@ dataSources:
           handler: handleTokenURIUpdated
         - event: TokenMetadataURIUpdated(indexed uint256,address,string)
           handler: handleTokenMetadataURIUpdated
+        - event: TokenDefaultUpdated(indexed uint256,address,bool)
+          handler: handleTokenDefaultUpdated
         - event: Approval(indexed address,indexed address,indexed uint256)
           handler: handleApproval
         - event: ApprovalForAll(indexed address,indexed address,bool)
@@ -38,9 +40,9 @@ dataSources:
     name: AvatarExchange
     network: motif
     source:
-      address: "0xca0D695c82ae73b4E4BA17D0F763E4b3F9768836"
+      address: "0x541C208852D9e610d04e793b463F4D0505Ea0062"
       abi: AvatarExchange
-      startBlock: 57961
+      startBlock: 71045
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -75,9 +77,9 @@ dataSources:
     name: AvatarListing
     network: motif
     source:
-      address: "0x518E68665aC9e016300Be54878ea3bF981BdBD1d"
+      address: "0x5805Ed11f30475CB7Ea87faA85EAcfB7D7B0b1cB"
       abi: AvatarListing
-      startBlock: 57961
+      startBlock: 71045
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
