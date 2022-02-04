@@ -200,6 +200,7 @@ export function fetchCurrencyName(currencyAddress: Address): string {
  * @param contentURI
  * @param contentHash
  * @param metadataURI
+ * @param isDefault
  * @param metadataHash 
  * @param creatorBidShare
  * @param ownerBidShare
@@ -216,6 +217,7 @@ export function createAvatar(
     contentURI: string,
     contentHash: Bytes,
     metadataURI: string,
+    isDefault: boolean,
     metadataHash: Bytes, 
     creatorBidShare: BigInt,
     ownerBidShare: BigInt,
@@ -232,6 +234,7 @@ export function createAvatar(
     avatar.contentURI = contentURI
     avatar.contentHash = contentHash
     avatar.metadataURI = metadataURI
+    avatar.isDefault = isDefault
     avatar.metadataHash = metadataHash 
     avatar.creatorBidShare = creatorBidShare
     avatar.ownerBidShare = ownerBidShare

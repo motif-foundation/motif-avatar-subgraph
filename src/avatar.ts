@@ -295,9 +295,12 @@ function handleMint(event: Transfer): void {
   let avatarContract = AvatarContract.bind(event.address)
   let contentURI = avatarContract.tokenURI(tokenId)
   let metadataURI = avatarContract.tokenMetadataURI(tokenId)
+  let isDefault = avatarContract.tokenDefault(tokenId)
 
   let contentHash = avatarContract.tokenContentHashes(tokenId)
   let metadataHash = avatarContract.tokenMetadataHashes(tokenId)
+
+
 
   let bidShares = fetchAvatarBidShares(tokenId, event.address)
 
@@ -309,7 +312,8 @@ function handleMint(event: Transfer): void {
     creator,
     contentURI,
     contentHash,
-    metadataURI,
+    metadataURI, 
+    isDefault,
     metadataHash,
     bidShares.creator,
     bidShares.owner,
