@@ -29,8 +29,8 @@ type Avatar @entity {
   "The uri of the metadata"
   metadataURI: String!
 
-  "The uri of the metadata"
-  isDefault: Boolean!
+  "Default avatar of the user"
+  isDefault: Boolean
 
   "The bid share for the current owner of the Avatar"
   ownerBidShare: BigInt!
