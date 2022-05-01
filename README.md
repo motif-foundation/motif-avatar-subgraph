@@ -1,0 +1,1 @@
+yarn codegen && yarn create-local && yarn deploy-local
