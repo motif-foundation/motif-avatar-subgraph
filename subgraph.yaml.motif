@@ -1,0 +1,117 @@
+specVersion:  0.0.3
+description: Motif Avatar Subgraph
+repository: https://github.com/motif-foundation/motif-avatar-subgraph
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Avatar
+    network: motif
+    source:
+      address: "0x62d440DD41E6Aa61F659Fdf3bF09cF3Ee59EC166"
+      abi: Avatar
+      startBlock: 1207
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Avatar
+      abis:
+        - name: Avatar
+          file: ./abis/Avatar.json
+        - name: AvatarExchange
+          file: ./abis/AvatarExchange.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: TokenURIUpdated(indexed uint256,address,string)
+          handler: handleTokenURIUpdated
+        - event: TokenMetadataURIUpdated(indexed uint256,address,string)
+          handler: handleTokenMetadataURIUpdated
+        - event: TokenDefaultUpdated(indexed uint256,address,bool)
+          handler: handleTokenDefaultUpdated
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+      file: ./src/avatar.ts
+  - kind: ethereum/contract
+    name: AvatarExchange
+    network: motif
+    source:
+      address: "0x7f3b622B2A48c159ADBea832C40049C09901afd5"
+      abi: AvatarExchange
+      startBlock: 1207
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Ask
+        - Bid
+      abis:
+        - name: AvatarExchange
+          file: ./abis/AvatarExchange.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: BidShareUpdated(indexed uint256,((uint256),(uint256),(uint256)))
+          handler: handleBidShareUpdated
+        - event: AskCreated(indexed uint256,(uint256,address))
+          handler: handleAskCreated
+        - event: AskRemoved(indexed uint256,(uint256,address))
+          handler: handleAskRemoved
+        - event: BidCreated(indexed uint256,(uint256,address,address,address,(uint256)))
+          handler: handleBidCreated
+        - event: BidRemoved(indexed uint256,(uint256,address,address,address,(uint256)))
+          handler: handleBidRemoved
+        - event: BidFinalized(indexed uint256,(uint256,address,address,address,(uint256)))
+          handler: handleBidFinalized
+      file: ./src/avatarExchange.ts
+  - kind: ethereum/contract
+    name: AvatarListing
+    network: motif
+    source:
+      address: "0x7c81254D995B1d61CF76a909f7e1efA7b692FA90"
+      abi: AvatarListing
+      startBlock: 1207
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ReserveListing
+        - ReserveListingBid
+        - InactiveReserveListingBid
+      abis:
+        - name: AvatarListing
+          file: ./abis/AvatarListing.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: ListingCreated(indexed uint256,indexed uint256,indexed address,uint256,uint256,uint256,uint8,address,address,uint8,address) 
+          handler: handleReserveListingCreated
+        - event: ListingApprovalUpdated(indexed uint256,indexed uint256,indexed address,bool)
+          handler: handleReserveListingApprovalUpdate
+        - event: ListingDropApprovalUpdated(indexed uint256,indexed uint256,indexed address,bool,uint256)
+          handler: handleReserveListingDropApprovalUpdate 
+        - event: ListingListPriceUpdated(indexed uint256,indexed uint256,indexed address,uint256)
+          handler: handleReserveListingListPriceUpdate
+        - event: ListingBid(indexed uint256,indexed uint256,indexed address,address,uint256,bool,bool)
+          handler: handleReserveListingBid
+        - event: ListingDurationExtended(indexed uint256,indexed uint256,indexed address,uint256)
+          handler: handleReserveListingDurationExtended
+        - event: ListingEnded(indexed uint256,indexed uint256,indexed address,address,address,address,uint256,uint256,address)
+          handler: handleReserveListingEnded
+        - event: ListingCanceled(indexed uint256,indexed uint256,indexed address,address)
+          handler: handleReserveListingCanceled
+      file: ./src/avatarListing.ts
