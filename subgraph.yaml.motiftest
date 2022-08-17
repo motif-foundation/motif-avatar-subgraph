@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: Avatar
-    network: motif
+    network: motiftest
     source:
-      address: "0xE94f6DAcE030f2B12261429113e636bfd7C82a23"
+      address: "0xc205b41619426557bd3cB97348a0b85F6A19f3C0"
       abi: Avatar
-      startBlock: 257
+      startBlock: 1
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -38,11 +38,11 @@ dataSources:
       file: ./src/avatar.ts
   - kind: ethereum/contract
     name: AvatarExchange
-    network: motif
+    network: motiftest
     source:
-      address: "0xf31Db7c5054152b79F93B843223A52B9b6a8860c"
+      address: "0xcc79cccb20B204E59d5864a89CA201A7b74aF3A5"
       abi: AvatarExchange
-      startBlock: 257
+      startBlock: 1
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -75,11 +75,11 @@ dataSources:
       file: ./src/avatarExchange.ts
   - kind: ethereum/contract
     name: AvatarListing
-    network: motif
+    network: motiftest
     source:
-      address: "0x3381C218F778672eBA5Be43ec9c2526569Bb124b"
+      address: "0xb5C792fE25A1631326b7E1C74183e905036Ab3F7"
       abi: AvatarListing
-      startBlock: 257
+      startBlock: 1
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
