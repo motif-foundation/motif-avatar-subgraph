@@ -8,7 +8,7 @@ dataSources:
     name: Avatar
     network: motif
     source:
-      address: "0x0EaCc031ACc3fe30E3A5544C053ed5C13a70e9c9"
+      address: "0x0948Ada022F022Cd78A8245651e5574586A45AC8"
       abi: Avatar
       startBlock: 1
     mapping:
@@ -40,7 +40,7 @@ dataSources:
     name: AvatarExchange
     network: motif
     source:
-      address: "0x7EEFEF0112a0E716674ed87CE2AC40A4bBab0A2f"
+      address: "0xab920372BC92dFBE757573546CE869170e85a4DD"
       abi: AvatarExchange
       startBlock: 1
     mapping:
@@ -77,7 +77,7 @@ dataSources:
     name: AvatarListing
     network: motif
     source:
-      address: "0x66c1c536e670cB96B29bc7331f38b6335e47819F"
+      address: "0x93f488F6412509381e5BA59390D4C9959Aa5E164"
       abi: AvatarListing
       startBlock: 1
     mapping:
