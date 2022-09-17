@@ -77,7 +77,7 @@ dataSources:
     name: AvatarListing
     network: motiftest
     source:
-      address: "0x3F4c09a0B67a589f69D0428E85a811dA4a11Fb74"
+      address: "0x9555d59572b7476424431251e76379F773e5b815"
       abi: AvatarListing
       startBlock: 7742
     mapping:
