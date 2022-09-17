@@ -520,11 +520,11 @@ export function createReserveListing(
     reserveListing.tokenContract = tokenContract 
     reserveListing.token = tokenContract.concat('-').concat(tokenId.toString())
     reserveListing.avatar = avatar ? avatar.id : null
-    reserveListing.approved = false
+    reserveListing.approved = true//false
     reserveListing.startsAt = startsAt
     reserveListing.duration = duration
     reserveListing.firstBidTime = BigInt.fromI32(0)
-    reserveListing.approvedTimestamp = null
+    reserveListing.approvedTimestamp = createdAtTimestamp//null
     reserveListing.listPrice = listPrice
     reserveListing.listType = listType 
     reserveListing.intermediaryFeePercentage = intermediaryFeePercentage
