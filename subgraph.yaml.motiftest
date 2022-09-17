@@ -10,7 +10,7 @@ dataSources:
     source:
       address: "0xE1c710B3d676830509A2F4Dd9911e8466BDca3db"
       abi: Avatar
-      startBlock: 7742
+      startBlock: 7817
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -42,7 +42,7 @@ dataSources:
     source:
       address: "0x770c5F0b9978F84543EBbb0713A1376d3Cd5E94f"
       abi: AvatarExchange
-      startBlock: 7742
+      startBlock: 7817
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -79,7 +79,7 @@ dataSources:
     source:
       address: "0x9555d59572b7476424431251e76379F773e5b815"
       abi: AvatarListing
-      startBlock: 7742
+      startBlock: 7817
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
