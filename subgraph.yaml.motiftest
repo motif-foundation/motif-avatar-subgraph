@@ -8,9 +8,9 @@ dataSources:
     name: Avatar
     network: motiftest
     source:
-      address: "0xE1c710B3d676830509A2F4Dd9911e8466BDca3db"
+      address: "0xCFd47661c42e07302fDE84A4d64e1E913F00f3dC"
       abi: Avatar
-      startBlock: 7817
+      startBlock: 1
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -40,9 +40,9 @@ dataSources:
     name: AvatarExchange
     network: motiftest
     source:
-      address: "0x770c5F0b9978F84543EBbb0713A1376d3Cd5E94f"
+      address: "0x67ce2EdD7DA7416391d8DC835815B1DB7026027D"
       abi: AvatarExchange
-      startBlock: 7817
+      startBlock: 1
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -77,9 +77,9 @@ dataSources:
     name: AvatarListing
     network: motiftest
     source:
-      address: "0x9555d59572b7476424431251e76379F773e5b815"
+      address: "0xF8b7E207ee47FFD034a4782cF9458E5555411750"
       abi: AvatarListing
-      startBlock: 7817
+      startBlock: 1
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
